@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{judul}}</title>
+    <link rel="icon" href="/img/cuaca.png">
+    <link rel="stylesheet" href="/css/style-bantuan.css"> <!-- Menghubungkan dengan CSS baru -->
+    <title>Bantuan</title>
+</head>
+<body>
+    {{>header}} <!-- Menyertakan header -->
+    <div class="background-image"></div>
+    <div class="main-content">
+        <div class="content-section">
+            <p><b>Apa tujuan dari aplikasi ini?</b> Aplikasi ini bertujuan untuk memberikan informasi cuaca secara real-time dan akurat berdasarkan lokasi yang dimasukkan oleh pengguna. Pengguna dapat merencanakan aktivitas sehari-hari dengan lebih baik berkat prediksi cuaca yang up-to-date.</p>
+            <p><b>Bagaimana cara menggunakan aplikasi ini?</b> Pengguna cukup memasukkan nama kota atau lokasi di kolom pencarian pada halaman utama aplikasi. Setelah itu, aplikasi akan menampilkan informasi cuaca untuk lokasi yang dicari.</p>
+            <p><b>Apakah data cuaca yang ditampilkan akurat?</b> Data cuaca yang ditampilkan diambil dari sumber terpercaya yang terus diperbarui secara berkala. Kami memastikan agar informasi cuaca selalu akurat dan relevan bagi pengguna.</p>
+            <p><b>Bagaimana cara aplikasi mengetahui lokasi cuaca yang saya cari?</b> Aplikasi ini menggunakan layanan geocoding yang menerjemahkan nama lokasi yang Anda masukkan ke dalam koordinat geografis. Setelah itu, informasi cuaca untuk koordinat tersebut akan ditampilkan.</p>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+    {{>footer}} <p> Yudi Mubarok </p> <!-- Menyertakan footer -->
+</body>
+</html>
