@@ -10,7 +10,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center; /* Menengahkan secara horizontal */
-    align-items: center; /* Menengahkan secara vertikal */ /* Warna latar belakang utama */
+    align-items: center; /* Menengahkan secara vertikal / / Warna latar belakang utama */
     background-size: cover; /* Menyesuaikan ukuran gambar latar belakang */
     background-position: center; /* Memusatkan gambar latar belakang */
     position: relative; /* Untuk gambar latar belakang */
@@ -23,9 +23,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/img/background1.jpg');
-    background-size: cover;
+    background-image: url('/img/latartentang.jpg');
+    background-size: 70% auto; /* Menyatakan ukuran 80% dari lebar elemen dan tinggi otomatis */
     background-position: center;
+    background-repeat: no-repeat; /* Tidak mengulangi gambar */
     z-index: -1; /* Pastikan gambar latar di belakang konten */
     transition: transform 10s ease, filter 5s ease;
 }
@@ -44,6 +45,7 @@ body {
     border-radius: 50%; /* Membulatkan gambar profil */
     width: 150px;
     height: 150px;
+    object-fit: cover; 
     margin-bottom: 20px;
     transition: transform 0.3s ease; /* Efek hover pada gambar */
 }
@@ -90,16 +92,17 @@ footer {
 
 header {
     
-    background: linear-gradient(90deg, hsl(135, 93%, 43%), #333); /* Gradient yang lebih cerah */
-    padding: 30px; /* Padding lebih besar untuk ruang yang lebih baik */
+    background: linear-gradient(90deg, hsl(194, 94%, 35%), #333); /* Gradient yang lebih cerah */
+    padding: 20px; /* Kurangi padding untuk memperkecil ruang */
     text-align: center;
-    border-bottom: 5px solid white;
+    border-bottom: 3px solid white; /* Kurangi ketebalan border */
     width: 100%;
     position: relative;
     z-index: 1;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Bayangan halus di bawah header */
+    border-bottom-left-radius: 30px; /* Kurangi radius untuk membuat lengkungan lebih kecil */
+    border-bottom-right-radius: 30px; /* Kurangi radius untuk membuat lengkungan lebih kecil */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Kurangi bayangan agar terlihat lebih halus */
+
 }
 
 
@@ -156,5 +159,3 @@ h1 {
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.6); /* Bayangan berwarna hijau */
     pointer-events: none; /* Agar elemen ini tidak menghalangi interaksi dengan konten */
 }
-
-

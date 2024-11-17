@@ -5,16 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{judul}}</title>
     <link rel="icon" href="/img/cuaca.png">
-    <link rel="stylesheet" href="/css/styles-tentang.css"> <!-- Menghubungkan dengan CSS baru -->
+    <link rel="stylesheet" href="/css/styles-tentang.css">
 </head>
 <body>
+    <!-- Audio untuk backsound -->
+    <audio id="background-sound" src="/audio/suara.mp3" autoplay loop></audio>
+
     <div class="background-image"></div>
     <div class="main-content">
         {{>header}} <!-- Menyertakan header -->
-        <img src="/img/yudi.jpg" alt="Foto pengembang" class="profile-pic">
-        <p>Dikembangkan oleh <strong>{{nama}}</strong></p>
-        <p>"Coba-Coba dulu, bisa ato enggaknya belakangan"</p>
+
+        <div class="cv-content">
+            <img src="/img/shahid.jpg" alt="Foto Pengembang" class="profile-pic">
+            <h2>{{nama}}</h2>
+            <p><strong>TTL:</strong> {{tempatLahir}}, {{tanggalLahir}}</p>
+            <p><strong>Jenis Kelamin:</strong> {{jenisKelamin}}</p>
+            <p><strong>Kewarganegaraan:</strong> {{kewarganegaraan}}</p>
+            <p><strong>Status:</strong> {{status}}</p>
+            <p><strong>Pendidikan:</strong> {{pendidikan}}</p>
+            <p><strong>Email:</strong> {{email}}</p>
+            <p><strong>Nomor HP:</strong> {{nomorHP}}</p>
+        </div>
+
+        {{>footer}} <!-- Menyertakan footer -->
     </div>
-    <script src="/js/app.js"></script>
+
+    <script>
+        // Cek apakah audio bisa diputar secara otomatis
+        window.addEventListener('load', function() {
+            var audio = document.getElementById("background-sound");
+            // Mengaktifkan audio jika browser memblokir autoplay
+            audio.play().catch(() => {
+                // Jika autoplay diblokir, munculkan tombol play
+                var playButton = document.createElement("button");
+                playButton.innerText = "Putar Backsound";
+                playButton.onclick = function() {
+                    audio.play();
+                    playButton.style.display = "none";
+                };
+                document.body.appendChild(playButton);
+            });
+        });
+    </script>
 </body>
 </html>

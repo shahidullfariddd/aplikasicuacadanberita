@@ -22,7 +22,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/img/background1.jpg');
+    background-image: url('/img/backgroundindex.jpg');
     background-size: cover;
     background-position: center;
     z-index: -1; /* Pastikan gambar latar di belakang konten */
@@ -150,7 +150,7 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, #4a90e2, #333); /* Gradient yang lebih cerah */
+    background: linear-gradient(90deg, #4a90e2, #e8dfdf); /* Gradient yang lebih cerah */
     padding: 30px; /* Padding lebih besar untuk ruang yang lebih baik */
     text-align: center;
     border-bottom: 5px solid white;

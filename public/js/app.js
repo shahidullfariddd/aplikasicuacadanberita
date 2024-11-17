@@ -11,7 +11,7 @@ weatherform.addEventListener('submit', (e) => {
     pesanDua.textContent = '';
 
     // Lakukan fetch untuk mendapatkan data cuaca
-    fetch('http://localhost:4000/infoCuaca?address=' + location).then((response) => {
+    fetch('/infoCuaca?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 pesanSatu.textContent = data.error; // Tampilkan error jika ada

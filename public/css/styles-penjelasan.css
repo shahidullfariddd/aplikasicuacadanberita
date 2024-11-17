@@ -17,7 +17,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/img/background1.jpg'); /* Gambar latar belakang */
+    background-image: url('/img/latarpenjelasan.jpg'); /* Gambar latar belakang */
     background-size: cover;
     background-position: center;
     z-index: -1; /* Pastikan gambar latar di belakang konten */
